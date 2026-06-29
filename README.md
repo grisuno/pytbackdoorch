@@ -170,7 +170,7 @@ pyinstaller --onefile \
             loader.py
 ```
 
-This creates a standalone binary that does not require Python or PyTorch to be pre‑installed on the target. For production use, consider excluding unused submodules (e.g., `torch.cuda`) to reduce the binary size.
+This creates a standalone binary that does not require Python or PyTorch to be pre‑installed on the target. For production use, The large binary size (~2.6 GB) is an intentional anti‑sandbox countermeasure: many automated analysis environments enforce file‑size thresholds (typically 100–500 MB) and either skip scanning or abort execution for larger objects, thereby evading both static signature matching and resource‑constrained dynamic emulation.
 
 ---
 
