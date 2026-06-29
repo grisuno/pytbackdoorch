@@ -1,1 +1,10 @@
+# requirements.txt
+# Dependencias para el generador de archivos .pth y el cargador Python
+# Útil para ejecutar el script en el entorno del atacante o en la víctima.
 
+torch>=1.8.0,<2.6.0   # PyTorch - necesario para torch.save y torch.load
+                      # Se recomienda la versión 2.0.0+ para mejor compatibilidad,
+                      # pero cualquier versión >=1.8.0 funciona con la PoC.
+# requirements-dev.txt
+pyinstaller>=6.0.0
+upx   # opcional, para comprimir el binario (instalar con el gestor de paquetes del sistema)
